@@ -70,7 +70,7 @@ const FeedbackForm = () => {
   return (
     <>
       <Container>
-        <Col>
+        <Col className="pb-3">
           <Formik
             initialValues={initialValues}
             validationSchema={validationSchema}
@@ -99,8 +99,8 @@ const FeedbackForm = () => {
                           <Card style={{ border: "none" }}>
                             <Card.Body>
                               <Col>
-                                <Row className="mb-2">
-                                  <Col>
+                                <Row className="mb-2" xs={12}>
+                                  <Col xs={12} md={6}>
                                     <FormControl
                                       control="input"
                                       type={"text"}
@@ -109,7 +109,7 @@ const FeedbackForm = () => {
                                       placeholder={"e.g john doe"}
                                     />
                                   </Col>
-                                  <Col>
+                                  <Col xs={12} md={6}>
                                     <FormControl
                                       control="input"
                                       type={"email"}
@@ -119,8 +119,8 @@ const FeedbackForm = () => {
                                     />
                                   </Col>
                                 </Row>
-                                <Row className="mb-2">
-                                  <Col xs={6}>
+                                <Row className="mb-2" xs={12}>
+                                  <Col xs={12} md={6}>
                                     <FormTele
                                       control="tele"
                                       type={"tel"}
@@ -130,8 +130,8 @@ const FeedbackForm = () => {
                                     />
                                   </Col>
                                 </Row>
-                                <Row className="mb-2">
-                                  <Col>
+                                <Row className="mb-2" xs={12}>
+                                  <Col xs={12} md={6}>
                                     <FormCheckBox
                                       control="checkbox"
                                       name="qos"
@@ -139,7 +139,7 @@ const FeedbackForm = () => {
                                       options={checkBoxOptions}
                                     />
                                   </Col>
-                                  <Col>
+                                  <Col xs={12} md={6}>
                                     <FormCheckBox
                                       control="checkbox"
                                       name="qob"
@@ -148,9 +148,8 @@ const FeedbackForm = () => {
                                     />
                                   </Col>
                                 </Row>
-                                <Row className="mb-2">
-                                  <Col>
-                                    {" "}
+                                <Row className="mb-2" xs={12}>
+                                  <Col xs={12} md={6}>
                                     <FormCheckBox
                                       control="checkbox"
                                       name="clean"
@@ -158,8 +157,7 @@ const FeedbackForm = () => {
                                       options={checkBoxOptions}
                                     />
                                   </Col>
-                                  <Col>
-                                    {" "}
+                                  <Col xs={12} md={6}>
                                     <FormCheckBox
                                       control="checkbox"
                                       name="dining"
