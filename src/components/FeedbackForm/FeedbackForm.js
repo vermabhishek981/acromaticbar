@@ -1,11 +1,14 @@
 import React from "react";
 import "./styles.css";
 import { Formik, Form } from "formik";
-import { Container, Row, Col, Card, Button, Modal } from "react-bootstrap";
+import { Container, Row, Col, Card, Button } from "react-bootstrap";
 import * as Yup from "yup";
 import FormControl from "../FormControl/FormControl";
 import FormTele from "../FormControl/FormTele";
 import FormCheckBox from "../FormControl/FormCheckBox";
+import { setModalShow } from "../../redux/features/formSlice";
+import { useDispatch } from "react-redux";
+import FormModal from "./FormModal";
 
 // Checkbox options
 const checkBoxOptions = [
@@ -46,8 +49,11 @@ const validationSchema = Yup.object({
 
 const FeedbackForm = () => {
   // Handling form submission
+  const dispatch = useDispatch();
+
   const onSubmit = (values, { resetForm }) => {
     console.log(values);
+    dispatch(setModalShow(true));
     resetForm({
       values: {
         customerName: "",
@@ -182,9 +188,7 @@ const FeedbackForm = () => {
           </Formik>
         </Col>
       </Container>
-      <Modal show={false} fullscreen={true}>
-        HELLO
-      </Modal>
+      <FormModal />
     </>
   );
 };

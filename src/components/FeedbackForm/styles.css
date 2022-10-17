@@ -1,3 +1,33 @@
-.formInput {
+.form-modal {
   background-color: rgb(245, 245, 245);
+  height: 100vh;
+}
+.form-modal-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+.modal-content-heading {
+  font-size: x-large;
+  margin-top: 1.5rem;
+  font-weight: bold;
+  color: #424242;
+  font-family: sans-serif;
+}
+.modal-content-subheading {
+  font-size: large;
+  margin-top: 0.3rem;
+  font-family: sans-serif;
+}
+.content-button {
+  width: 9rem;
+  height: 2.6rem;
+  background-color: #8c68cd !important;
+  color: #eee;
+  border: none;
+  border-color: #8c68cd !important;
+  font-family: sans-serif !important;
+  margin-top: 1.5rem;
 }
